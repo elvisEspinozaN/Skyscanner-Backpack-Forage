@@ -5,9 +5,10 @@
 > so please refer to [it's documentation](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md)
 > for more usage information.
 
-# [_Put your project name here_]
+# [Skyscanner Software Engineering virtual experience programme with Forage]
 
-[_Add a brief description of your project here._]
+[This program is going to be an exciting journey for me as I work on four projects, including creating a Backpack React web app, building a microservice, creating a mobile flight itinerary, and building a user-friendly platform.
+I'm excited to dive into this program and expand my skill set.]
 
 ## npm script commands
 
@@ -50,7 +51,7 @@ my-app/
 Inside `ssr.js`, export the components that you wish to expose for server-side rendering - the file contents should look something like this:
 
 ```js
-import App from './App';
+import App from "./App";
 
 export default { App };
 ```
@@ -72,19 +73,19 @@ This file can now be required and pre-rendered on the server like so (rough impl
 `server.js`:
 
 ```js
-const React = require('react');
-const express = require('express');
-const ReactDOMServer = require('react-dom/server');
+const React = require("react");
+const express = require("express");
+const ReactDOMServer = require("react-dom/server");
 
-const components = require('./my-app/build/ssr').default;
+const components = require("./my-app/build/ssr").default;
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get("/", (req, res) => {
   const element = React.createElement(components.App);
   const html = ReactDOMServer.renderToString(element);
 
-  res.render('index', { html });
+  res.render("index", { html });
 });
 
 module.exports = router;
