@@ -1,4 +1,4 @@
-@import '~bpk-mixins';
+@import "~bpk-mixins";
 
 @mixin container {
   max-width: $bpk-breakpoint-desktop;
@@ -33,13 +33,13 @@
     @include bpk-breakpoint-mobile {
       padding: $bpk-spacing-base;
     }
-  }
 
-  &__heading {
-    margin-bottom: $bpk-spacing-sm;
-  }
+    &__heading {
+      margin-bottom: $bpk-spacing-sm;
+    }
 
-  &__text {
-    margin-bottom: $bpk-spacing-sm;
+    &__text {
+      margin-bottom: $bpk-spacing-sm;
+    }
   }
 }
