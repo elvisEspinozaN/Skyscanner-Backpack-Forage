@@ -34,6 +34,9 @@ public class SkyScannerApplication extends Application<SkyScannerConfiguration> 
         // Add all the SearchResult objects from json files
         searchResults.addAll(readSearch(mapper, "rental_cars.json"));
         searchResults.addAll(readSearch(mapper, "hotels.json"));
+
+        final SearchResource resource = new SearchResource(searchResults);
+        environment.jersey().register(resource);
     }
 
     private List<SearchResult> readSearch(ObjectMapper mapper, String fileName) throws IOException {
